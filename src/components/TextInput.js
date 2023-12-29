@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-function TextInput() {
+function TextInput({initialValue="", placeholder="Text", handleInput, required=false, inputType="text", name="text"}) {
+  const [value, setValue] = useState("");
+  useEffect(()=>{
+  setValue(initialValue)
+  },[initialValue])
   return (
-    <div>TextInput</div>
+    <input type={inputType} onChange={handleInput} className="form-control" value={value || ""} name={name} placeholder={placeholder}/>
   )
 }
 
