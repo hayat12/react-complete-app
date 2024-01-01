@@ -1,7 +1,5 @@
 import React from 'react';
 import App from './App';
-import user from '@testing-library/user-event';
-
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
